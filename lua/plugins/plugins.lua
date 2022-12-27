@@ -120,6 +120,15 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- themes
+	use({ "rebelot/kanagawa.nvim", commit = "fb733c1043a462155b52cd97efd920f1dd72d33a" })
+	use({ "catppuccin/nvim", commit = "55f43a952856bc0029e6cef066297c6cfab3451d" })
+	use({ "sainnhe/everforest", commit = "34c9fbc6f9777c4b1e5a65e590f0fa614c1e747c" })
+	use({ "ellisonleao/gruvbox.nvim", commit = "c64ec557672c9c8ecc71a438533525482021377f" })
+
+	-- surround
+	use({ "kylechui/nvim-surround", commit = "6aafeeda19a98768d1c17ff6dde5548bc77a1a2d" })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
