@@ -83,6 +83,13 @@ return packer.startup(function(use)
 	use({ "williamboman/mason-lspconfig.nvim", commit = "0eb7cfefbd3a87308c1875c05c3f3abac22d367c" })
 	use({ "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" })
+	use({
+		"folke/trouble.nvim",
+		commit = "897542f90050c3230856bc6e45de58b94c700bbf",
+		config = function()
+			require("trouble").setup()
+		end,
+	})
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
@@ -104,6 +111,7 @@ return packer.startup(function(use)
 	-- which-key
 	use({ "folke/which-key.nvim", commit = "8682d3003595017cd8ffb4c860a07576647cc6f8" })
 
+	-- fidget
 	use({
 		"j-hui/fidget.nvim",
 		commit = "44585a0c0085765195e6961c15529ba6c5a2a13b",
@@ -111,6 +119,7 @@ return packer.startup(function(use)
 			require("fidget").setup()
 		end,
 	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
