@@ -22,6 +22,9 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Close windows
+keymap("n", "<C-x>", "<C-w>q", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -40,8 +43,17 @@ keymap("n", "<S-x>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
+keymap("n", "<C-p>", "o<Esc>p", opts)
+keymap("n", "<C-P>", "O<Esc>p", opts)
+
+-- Save
+keymap("n", "<C-s>", "<cmd>w!<cr>", opts)
 
 -- Insert --
+keymap("i", "<C-v>", "<Esc>p`]A", opts)
+keymap("i", "<C-k>", "<Esc>d$a", opts)
+keymap("i", "<C-z>", "<Esc>ui", opts)
+
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "jj", "<ESC>", opts)
