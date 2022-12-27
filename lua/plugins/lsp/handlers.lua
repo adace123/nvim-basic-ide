@@ -23,7 +23,6 @@ M.setup = function()
 	end
 
 	local config = {
-		virtual_text = false, -- disable virtual text
 		signs = {
 			active = signs, -- show signs
 		},
@@ -85,6 +84,22 @@ M.on_attach = function(client, bufnr)
 		return
 	end
 	illuminate.on_attach(client)
+
+	-- if client.supports_method("textDocument/documentHighlight") then
+	-- 	vim.api.nvim_create_autocmd("CursorHold", {
+	-- 		callback = function()
+	-- 			vim.lsp.buf.document_highlight()
+	-- 		end,
+	-- 		group = group,
+	-- 	})
+	--
+	-- 	vim.api.nvim_create_autocmd("CursorMoved", {
+	-- 		callback = function()
+	-- 			vim.lsp.buf.clear_references()
+	-- 		end,
+	-- 		group = group,
+	-- 	})
+	-- end
 end
 
 return M
