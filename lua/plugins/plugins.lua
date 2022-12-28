@@ -71,6 +71,7 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }) -- snippet completions
 	use({ "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" })
 	use({ "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" })
+	use({ "hrsh7th/cmp-cmdline", commit = "23c51b2a3c00f6abc4e922dbd7c3b9aca6992063" })
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }) --snippet engine
@@ -90,6 +91,7 @@ return packer.startup(function(use)
 			require("trouble").setup()
 		end,
 	})
+	use({ "Saecki/crates.nvim", commit = "a70328ae638e20548bcfc64eb9561101104b3008" })
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
@@ -128,6 +130,15 @@ return packer.startup(function(use)
 
 	-- surround
 	use({ "kylechui/nvim-surround", commit = "6aafeeda19a98768d1c17ff6dde5548bc77a1a2d" })
+
+	-- notifications
+	use({
+		"rcarriga/nvim-notify",
+		commit = "b005821516f1f37801a73067afd1cef2dbc4dfe8",
+		config = function()
+			require("notify").setup()
+		end,
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
