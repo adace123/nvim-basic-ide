@@ -89,6 +89,7 @@ local mappings = {
 	["q"] = { "<cmd>q!<CR>", "Quit" },
 	["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["L"] = { "<cmd>Lazy<CR>", "Lazy" },
 	f = {
 		name = "Find",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
@@ -108,15 +109,6 @@ local mappings = {
 		C = { "<cmd>Telescope commands<CR>", "Commands" },
 		z = { "<cmd>Telescope zoxide list<CR>", "Zoxide" },
 	},
-	p = {
-		name = "Packer",
-		c = { "<cmd>PackerCompile<cr>", "Compile" },
-		i = { "<cmd>PackerInstall<cr>", "Install" },
-		s = { "<cmd>PackerSync<cr>", "Sync" },
-		S = { "<cmd>PackerStatus<cr>", "Status" },
-		u = { "<cmd>PackerUpdate<cr>", "Update" },
-	},
-
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
