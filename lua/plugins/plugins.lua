@@ -98,6 +98,7 @@ local plugins = {
 	{ "catppuccin/nvim" },
 	{ "sainnhe/everforest" },
 	{ "ellisonleao/gruvbox.nvim" },
+	{ "nyoom-engineering/oxocarbon.nvim" },
 
 	-- surround
 	{
