@@ -95,7 +95,7 @@ local mappings = {
 		B = { "<cmd>Telescope buffers<CR>", "Find Buffer" },
 		m = { "<cmd>Telescope marks<CR>", "Find Mark" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-		f = { "<cmd>Telescope find_files<CR>", "Find File" },
+		f = { "<cmd>Telescope find_files hidden=true<CR>", "Find File" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		c = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
 		w = { "<cmd>Telescope live_grep<CR>", "Find Text" },
@@ -181,7 +181,7 @@ local mappings = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
 			"Workspace Symbols",
 		},
-    t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
+		t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
 	},
 	T = {
 		name = "Tab",
