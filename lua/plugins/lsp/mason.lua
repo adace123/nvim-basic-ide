@@ -7,6 +7,11 @@ local servers = {
 	"bashls",
 	"jsonls",
 	"yamlls",
+	"rust_analyzer",
+	"nil_ls",
+	"zls",
+	"terraform-ls",
+	"gopls",
 }
 
 local settings = {
