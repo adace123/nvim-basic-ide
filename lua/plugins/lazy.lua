@@ -198,8 +198,6 @@ local plugins = {
 		config = function()
 			vim.notify = require("notify")
 		end,
-		lazy = false,
-		priority = 10,
 	},
 
 	-- search
@@ -207,6 +205,14 @@ local plugins = {
 		"kevinhwang91/nvim-hlslens",
 		config = function()
 			require("hlslens").setup()
+		end,
+	},
+
+	-- sessions
+	{
+		"folke/persistence.nvim",
+		config = function()
+			require("persistence").setup()
 		end,
 	},
 }

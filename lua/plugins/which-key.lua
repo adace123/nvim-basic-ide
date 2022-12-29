@@ -102,7 +102,6 @@ local mappings = {
 		c = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
 		w = { "<cmd>Telescope live_grep<CR>", "Find Text" },
 		s = { "<cmd>Telescope grep_string<CR>", "Find String" },
-		S = { "<cmd>SearchSession<CR>", "Find Session" },
 		p = { "<cmd>Telescope projects<CR>", "Projects" },
 		r = { "<cmd>Telescope oldfiles<CR>", "Recent File" },
 		R = { "<cmd>Telescope registers<CR>", "Registers" },
@@ -175,6 +174,11 @@ local mappings = {
 			"Workspace Symbols",
 		},
 		t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
+	},
+	s = {
+		name = "Session",
+		s = { "<cmd>lua require('persistence').load()<cr>", "Load Session for Current Directory" },
+		l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Load Last Session" },
 	},
 	T = {
 		name = "Tab",

@@ -22,6 +22,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
 	dashboard.button("C", " " .. " Colorscheme", ":Telescope colorscheme <CR>"),
 	dashboard.button("q", " " .. " Quit", ":qa<CR>"),
+	dashboard.button("s", " " .. " Load Last Session", ":lua require('persistence').load({ last = true })<CR>"),
 }
 
 dashboard.section.footer.val = curr_date
