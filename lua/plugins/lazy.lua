@@ -196,6 +196,14 @@ local plugins = {
 		lazy = false,
 		priority = 10,
 	},
+
+	-- search
+	{
+		"kevinhwang91/nvim-hlslens",
+		config = function()
+			require("hlslens").setup()
+		end,
+	},
 }
 
 lazy.setup(plugins)
