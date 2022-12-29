@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 local dashboard = require("alpha.themes.dashboard")
-local curr_date = os.date("%A, %B %d, %Y")
+local curr_date = os.date("%m-%d-%Y")
 dashboard.section.header.val = {
 	[[                               __                ]],
 	[[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
@@ -25,7 +25,15 @@ dashboard.section.buttons.val = {
 	dashboard.button("s", " " .. " Load Last Session", ":lua require('persistence').load({ last = true })<CR>"),
 }
 
-dashboard.section.footer.val = curr_date
+local nvim_version = vim.version()
+local version_string = "v" .. nvim_version.major .. "." .. nvim_version.minor .. "." .. nvim_version.patch
+local plugin_stats = require("lazy").stats()
+dashboard.section.footer.val = " "
+	.. version_string
+	.. " |  "
+	.. plugin_stats.count
+	.. " plugins |  "
+	.. curr_date
 dashboard.section.footer.opts.hl = "Type"
 dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
