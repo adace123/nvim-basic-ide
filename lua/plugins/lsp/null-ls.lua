@@ -33,6 +33,7 @@ null_ls.setup({
 			extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
 		}),
 		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.autoflake.with({ extra_args = { "--ignore-pass-statements" } }),
 		formatting.stylua,
 		formatting.isort,
 		formatting.rustfmt,
