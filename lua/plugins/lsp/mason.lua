@@ -10,7 +10,7 @@ local servers = {
 	"rust_analyzer",
 	"nil_ls",
 	"zls",
-	"terraform-ls",
+	"terraformls",
 	"gopls",
 }
 
