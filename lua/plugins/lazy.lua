@@ -165,7 +165,7 @@ local plugins = {
 			require("plugins.dap")
 		end,
 	},
-	{ "rcarriga/nvim-dap-ui" },
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
 	{ "ravenxrz/DAPInstall.nvim" },
 
 	-- which-key
