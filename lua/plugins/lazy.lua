@@ -215,6 +215,14 @@ local plugins = {
 			require("persistence").setup()
 		end,
 	},
+
+	-- motion
+	{
+		"ggandor/leap.nvim",
+		config = function()
+			require("leap").add_default_mappings()
+		end,
+	},
 }
 
 lazy.setup(plugins)
