@@ -1,2 +1,4 @@
+pcall(require, "impatient")
 require("core")
-require("plugins")
+require("plugins.lazy")
+require("core.after")
