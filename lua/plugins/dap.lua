@@ -14,9 +14,16 @@ if not dap_install_status_ok then
 end
 
 dap_install.setup({})
+local debuggers = {
+	"python",
+	"go_delve",
+	"lua",
+	"codelldb",
+}
 
-dap_install.config("python", {})
--- add other configs here
+for _, debugger in ipairs(debuggers) do
+	dap_install.config(debugger, {})
+end
 
 dapui.setup({
 	expand_lines = true,
