@@ -133,6 +133,7 @@ local mappings = {
 	},
 	d = {
 		name = "Debugger",
+		d = { "<cmd>lua require('dap').clear_breakpoints()<cr>", "Clear Breakpoints" },
 		b = { "<cmd>lua require('dap').toggle_breakpoint()<cr>", "Toggle Breakpoint" },
 		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
 		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step Into" },
@@ -140,8 +141,10 @@ local mappings = {
 		O = { "<cmd>lua require'dap'.step_over()<cr>", "Step Out" },
 		r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Toggle Repl" },
 		l = { "<cmd>lua require'dap'.run_last()<cr>", "Run Last" },
-		u = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
+		L = { "<cmd>lua require('dap').list_breakpoints(true)<cr>", "List Breakpoints" },
+		s = { "<cmd>lua require('dap').status()<cr>", "Status" },
 		t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+		u = { "<cmd>lua require'dapui'.toggle()<cr>", "Toggle UI" },
 	},
 	l = {
 		name = "LSP",
