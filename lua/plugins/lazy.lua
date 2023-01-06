@@ -132,7 +132,40 @@ local plugins = {
 			require("trouble").setup()
 		end,
 	},
-	{ "Saecki/crates.nvim" },
+	{
+		"Saecki/crates.nvim",
+		config = function()
+			require("crates").setup()
+		end,
+	},
+	{
+		"simrat39/rust-tools.nvim",
+		config = function()
+			require("rust-tools").setup()
+		end,
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
+		"zbirenbaum/neodim",
+		config = function()
+			require("neodim").setup({
+				alpha = 0.75,
+				blend_color = "#000000",
+				update_in_insert = {
+					enable = true,
+					delay = 100,
+				},
+				hide = {
+					virtual_text = true,
+					signs = true,
+					underline = true,
+				},
+			})
+		end,
+	},
 
 	-- Telescope
 	{
