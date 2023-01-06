@@ -79,3 +79,9 @@ keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(v
 
 -- Lsp
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- Resize window
+keymap("n", "<S-Up>", "<cmd>resize +2<CR>", opts)
+keymap("n", "<S-Down>", "<cmd>resize -2<CR>", opts)
+keymap("n", "<S-Left>", "<cmd>vertical resize -2<CR>", opts)
+keymap("n", "<S-Right>", "<cmd>vertical resize +2<CR>", opts)
