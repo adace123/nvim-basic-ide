@@ -37,7 +37,13 @@ local k9s = Terminal:new({ cmd = "k9s", hidden = true })
 local python = Terminal:new({ cmd = "ipython", hidden = true })
 local bottom = Terminal:new({ cmd = "btm", hidden = true })
 
+local path = vim.fn.getcwd()
 function _LAZYGIT_TOGGLE()
+	-- reload laygit when buffer from another repo is open
+	if path ~= vim.fn.getcwd() then
+		path = vim.fn.getcwd()
+		lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+	end
 	lazygit:toggle()
 end
 
