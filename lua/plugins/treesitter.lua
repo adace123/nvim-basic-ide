@@ -27,4 +27,51 @@ configs.setup({
 		enable = true,
 		enable_autocmd = false,
 	},
+	textobjects = {
+		select = {
+			enable = true,
+			lookahead = true,
+			keymaps = {
+				-- You can use the capture groups defined in textobjects.scm
+				["af"] = "@function.outer",
+				["if"] = "@function.inner",
+				["ac"] = "@class.outer",
+        ["ab"] = "@block.outer",
+        ["ib"] = "@block.inner",
+				-- You can optionally set descriptions to the mappings (used in the desc parameter of
+				-- nvim_buf_set_keymap) which plugins like which-key display
+				["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
+			},
+			selection_modes = {
+				["@parameter.outer"] = "v", -- charwise
+				["@function.outer"] = "V", -- linewise
+				["@class.outer"] = "<c-v>", -- blockwise
+			},
+			include_surrounding_whitespace = true,
+		},
+		move = {
+			enable = true,
+			set_jumps = true, -- whether to set jumps in the jumplist
+			goto_next_start = {
+				["]f"] = "@function.outer",
+				["]c"] = { query = "@class.outer", desc = "Next class start" },
+        ["]b"] = "@block.outer",
+			},
+			goto_next_end = {
+				["]F"] = "@function.outer",
+				["]C"] = "@class.outer",
+        ["]B"] = "@block.outer",
+			},
+			goto_previous_start = {
+				["[f"] = "@function.outer",
+				["[c"] = "@class.outer",
+        ["[b"] = "@block.outer",
+			},
+			goto_previous_end = {
+				["[F"] = "@function.outer",
+				["[C"] = "@class.outer",
+        ["[B"] = "@block.outer",
+			},
+		},
+	},
 })
