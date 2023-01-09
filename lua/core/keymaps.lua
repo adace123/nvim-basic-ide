@@ -46,6 +46,9 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<C-p>", "o<Esc>p", opts)
 keymap("n", "<C-P>", "O<Esc>p", opts)
 
+-- Redo
+keymap("n", "U", "<C-r>", opts)
+
 -- Save
 keymap("n", "<C-s>", "<cmd>w!<cr>", opts)
 
@@ -85,3 +88,14 @@ keymap("n", "<S-Up>", "<cmd>resize +2<CR>", opts)
 keymap("n", "<S-Down>", "<cmd>resize -2<CR>", opts)
 keymap("n", "<S-Left>", "<cmd>vertical resize -2<CR>", opts)
 keymap("n", "<S-Right>", "<cmd>vertical resize +2<CR>", opts)
+
+-- search
+keymap("n", "n", "nzz", opts)
+keymap("n", "N", "Nzz", opts)
+keymap("n", "*", "*zz", opts)
+keymap("n", "#", "#zz", opts)
+keymap("n", "g*", "g*zz", opts)
+keymap("n", "g#", "g#zz", opts)
+
+-- zen
+keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
