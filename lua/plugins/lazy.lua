@@ -91,6 +91,14 @@ local plugins = {
 			})
 		end,
 	},
+	{ "ray-x/aurora" },
+	{ "cocopon/iceberg.vim" },
+	{ "drewtempelmeyer/palenight.vim" },
+	{ "olimorris/onedarkpro.nvim" },
+	{ "nyoom-engineering/oxocarbon.nvim" },
+	{ "sainnhe/gruvbox-material" },
+	{ "arcticicestudio/nord-vim" },
+	{ "Shatur/neovim-ayu" },
 
 	-- cmp plugins
 	{
@@ -166,7 +174,6 @@ local plugins = {
 			})
 		end,
 	},
-
 	-- Telescope
 	{
 		"nvim-telescope/telescope.nvim",
@@ -181,6 +188,10 @@ local plugins = {
 		config = function()
 			require("plugins.treesitter")
 		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
 	},
 
 	-- Git
@@ -254,6 +265,14 @@ local plugins = {
 		"ggandor/leap.nvim",
 		config = function()
 			require("leap").add_default_mappings()
+		end,
+	},
+
+	-- zen mode
+	{
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup()
 		end,
 	},
 }
