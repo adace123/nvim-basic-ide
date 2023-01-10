@@ -101,4 +101,4 @@ keymap("n", "g#", "g#zz", opts)
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 
 -- terminal
-vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
+keymap("t", "<esc>", [[<C-\><C-n>]], opts)
