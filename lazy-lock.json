@@ -79,6 +79,10 @@
     "branch": "main",
     "commit": "e863942494d7c72a7c8d2c54cf651f28fc5a76ab"
   },
+  "horizon.nvim": {
+    "branch": "master",
+    "commit": "f7c758f0ebd47a72dd2832a8744340e72dad62f8"
+  },
   "iceberg.vim": {
     "branch": "master",
     "commit": "e01ac08c2202e7544531f4d806f6893539da6471"
@@ -118,10 +122,6 @@
   "neodim": {
     "branch": "master",
     "commit": "c346344ade2ce709e6bd282f10e43778672b861e"
-  },
-  "neovim-ayu": {
-    "branch": "master",
-    "commit": "ba749799e48a8c5065106989eb8bf9915b51081d"
   },
   "nord-vim": {
     "branch": "main",
@@ -193,7 +193,7 @@
   },
   "onedarkpro.nvim": {
     "branch": "main",
-    "commit": "571e5982bb9aff64ced4b058e22a0241b60fea90"
+    "commit": "a67e6f206592c7e68c5f0a0f9a9c76f4d4bfee37"
   },
   "oxocarbon.nvim": {
     "branch": "main",
@@ -218,6 +218,10 @@
   "rust-tools.nvim": {
     "branch": "master",
     "commit": "df584e84393ef255f5b8cbd709677d6a3a5bf42f"
+  },
+  "shades-of-purple.vim": {
+    "branch": "master",
+    "commit": "e806d38190a6a2e8b9244824c2953d6567f141f3"
   },
   "telescope.nvim": {
     "branch": "master",

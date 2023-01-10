@@ -98,7 +98,8 @@ local plugins = {
 	{ "nyoom-engineering/oxocarbon.nvim" },
 	{ "sainnhe/gruvbox-material" },
 	{ "arcticicestudio/nord-vim" },
-	{ "Shatur/neovim-ayu" },
+	{ "LunarVim/horizon.nvim" },
+	{ "Rigellute/shades-of-purple.vim" },
 
 	-- cmp plugins
 	{
