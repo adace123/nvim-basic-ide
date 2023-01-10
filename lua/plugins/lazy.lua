@@ -276,6 +276,14 @@ local plugins = {
 			require("zen-mode").setup()
 		end,
 	},
+
+	-- tabs
+	{
+		"tiagovla/scope.nvim",
+		config = function()
+			require("scope").setup()
+		end,
+	},
 }
 
 lazy.setup(plugins)

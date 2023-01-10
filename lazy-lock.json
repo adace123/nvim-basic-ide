@@ -219,6 +219,10 @@
     "branch": "master",
     "commit": "df584e84393ef255f5b8cbd709677d6a3a5bf42f"
   },
+  "scope.nvim": {
+    "branch": "main",
+    "commit": "2db6d31de8e3a98d2b41c0f0d1f5dc299ee76875"
+  },
   "shades-of-purple.vim": {
     "branch": "master",
     "commit": "e806d38190a6a2e8b9244824c2953d6567f141f3"

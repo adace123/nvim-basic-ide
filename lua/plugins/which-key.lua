@@ -185,6 +185,7 @@ local mappings = {
 	},
 	T = {
 		name = "Tab",
+		N = { "<cmd>tabnew<CR>", "New Tab" },
 		n = { "<cmd>tabnext<CR>", "Next Tab" },
 		p = { "<cmd>tabprev<CR>", "Prev Tab" },
 		x = { "<cmd>tabclose<CR>", "Close Tab" },
