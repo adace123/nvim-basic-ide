@@ -99,3 +99,6 @@ keymap("n", "g#", "g#zz", opts)
 
 -- zen
 keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
+
+-- terminal
+vim.keymap.set("t", "<esc>", [[<C-\><C-n>]], opts)
