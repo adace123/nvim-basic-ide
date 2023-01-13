@@ -22,7 +22,8 @@ dashboard.section.buttons.val = {
 	dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
 	dashboard.button("C", " " .. " Colorscheme", ":Telescope colorscheme <CR>"),
 	dashboard.button("q", " " .. " Quit", ":qa<CR>"),
-	dashboard.button("s", " " .. " Load Last Session", ":lua require('persistence').load({ last = true })<CR>"),
+	dashboard.button("s", " " .. " Load Directory Session", ":lua require('persistence').load()<CR>"),
+	dashboard.button("S", " " .. " Load Last Session", ":lua require('persistence').load({ last = true })<CR>"),
 }
 
 local nvim_version = vim.version()
