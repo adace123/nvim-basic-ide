@@ -171,6 +171,10 @@
     "branch": "master",
     "commit": "f7ebb0fed4b952c77bb5827db030405f2d6cd4e7"
   },
+  "nvim-navic": {
+    "branch": "master",
+    "commit": "7a2b823152fe4de65ee7925b0e32d26ed73bc57c"
+  },
   "nvim-notify": {
     "branch": "master",
     "commit": "b005821516f1f37801a73067afd1cef2dbc4dfe8"
@@ -239,9 +243,9 @@
     "branch": "master",
     "commit": "e806d38190a6a2e8b9244824c2953d6567f141f3"
   },
-  "telescope-live-grep-args.nvim": {
-    "branch": "master",
-    "commit": "7de3baef1ec4fb77f7a8195fe87bebd513244b6a"
+  "telescope-lazy.nvim": {
+    "branch": "main",
+    "commit": "f851ccb3d650d0d09cc7230b64e7633b95ca9bc9"
   },
   "telescope.nvim": {
     "branch": "master",
