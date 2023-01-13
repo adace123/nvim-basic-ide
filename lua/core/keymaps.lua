@@ -105,4 +105,4 @@ keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
 
 -- save without autoformatting
-keymap("n", "W", "<cmd>:noautoformat w<cr>", opts)
+keymap("n", "W", "<cmd>:noautocmd w<cr>", opts)
