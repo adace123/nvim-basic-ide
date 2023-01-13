@@ -180,6 +180,7 @@ local mappings = {
 			"Workspace Symbols",
 		},
 		t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
+		["@"] = { "<cmd>lua require('neogen').generate()<cr>", "Generate Annotation" },
 	},
 	S = {
 		name = "Session",
