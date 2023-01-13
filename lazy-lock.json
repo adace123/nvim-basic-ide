@@ -11,6 +11,10 @@
     "branch": "master",
     "commit": "5d57303efde86fcb0959c52b1a6d40f923940f34"
   },
+  "aerial.nvim": {
+    "branch": "master",
+    "commit": "3eafbd28ae573fa665121a6e058a450cf3fe8573"
+  },
   "alpha-nvim": {
     "branch": "main",
     "commit": "21a0f2520ad3a7c32c0822f943368dc063a569fb"
@@ -106,10 +110,6 @@
   "leap.nvim": {
     "branch": "main",
     "commit": "a968ab4250840dc879e805f918b4f3b892310a12"
-  },
-  "lspsaga.nvim": {
-    "branch": "main",
-    "commit": "90e747166b7e4755231a04d92cd521ca0cc5675b"
   },
   "lualine.nvim": {
     "branch": "master",

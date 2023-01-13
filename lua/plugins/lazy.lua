@@ -175,18 +175,18 @@ local plugins = {
 			})
 		end,
 	},
-	-- {
-	-- 	"glepnir/lspsaga.nvim",
-	-- 	config = function()
-	-- 		require("lspsaga").setup({
-	-- 			code_action_lightbulb = {
-	-- 				enable = false,
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
 	{ "towolf/vim-helm" },
 	{ "NoahTheDuke/vim-just" },
+	{
+		"stevearc/aerial.nvim",
+		config = function()
+			require("aerial").setup({
+				layout = {
+					min_width = 25,
+				},
+			})
+		end,
+	},
 
 	-- Telescope
 	{
