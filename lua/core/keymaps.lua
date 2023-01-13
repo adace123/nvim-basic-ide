@@ -43,8 +43,8 @@ keymap("n", "<S-x>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
-keymap("n", "<C-p>", "o<Esc>p", opts)
-keymap("n", "<C-P>", "O<Esc>p", opts)
+keymap("n", "[p", "o<Esc>p", opts)
+keymap("n", "]p", "O<Esc>p", opts)
 
 -- Redo
 keymap("n", "U", "<C-r>", opts)
@@ -102,3 +102,6 @@ keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 
 -- terminal
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
+
+-- save without autoformatting
+keymap("n", "W", "<cmd>:noautocmd w<cr>", opts)
