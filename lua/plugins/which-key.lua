@@ -91,10 +91,12 @@ local mappings = {
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["L"] = { "<cmd>Lazy<CR>", "Lazy" },
 	["D"] = { "<cmd>lua require('notify').dismiss()<CR>", "Dismiss Notifications" },
+	["r"] = { "*:%s//", "Replace Under Cursor" },
 	f = {
 		name = "Find",
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		B = { "<cmd>Telescope buffers<CR>", "Find Buffer" },
+		B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+		b = { "<cmd>Telescope buffers<CR>", "Find Buffer" },
+		D = { "<cmd>Telescope diagnostics", "Find Diagnostics" },
 		m = { "<cmd>Telescope marks<CR>", "Find Mark" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		f = { "<cmd>Telescope find_files hidden=true<CR>", "Find File" },
@@ -171,6 +173,7 @@ local mappings = {
 		l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
 		q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Quickfix" },
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+		R = { "<cmd>lua LspRestart<cr>", "Restart" },
 		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
 		S = {
 			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
