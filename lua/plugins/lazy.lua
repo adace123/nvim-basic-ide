@@ -196,6 +196,15 @@ local plugins = {
 		"onsails/lspkind.nvim",
 	},
 	{ "ray-x/lsp_signature.nvim" },
+	{
+		"danymat/neogen",
+		config = function()
+			require("neogen").setup()
+		end,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
 
 	-- Telescope
 	{
