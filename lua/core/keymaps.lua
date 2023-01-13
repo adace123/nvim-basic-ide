@@ -80,8 +80,9 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
--- Lsp
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+-- git
+keymap("n", "[h", "<cmd>lua require('gitsigns').prev_hunk()<cr>", opts)
+keymap("n", "]h", "<cmd>lua require('gitsigns').next_hunk()<cr>", opts)
 
 -- Resize window
 keymap("n", "<S-Up>", "<cmd>resize +2<CR>", opts)
@@ -104,4 +105,4 @@ keymap("n", "<C-z>", "<cmd>ZenMode<cr>", opts)
 keymap("t", "<esc>", [[<C-\><C-n>]], opts)
 
 -- save without autoformatting
-keymap("n", "W", "<cmd>:noautocmd w<cr>", opts)
+keymap("n", "W", "<cmd>:noautoformat w<cr>", opts)
