@@ -90,6 +90,17 @@ M.on_attach = function(client, bufnr)
 	end
 	illuminate.on_attach(client)
 
+	local status_ok_lsp_signature, lsp_signature = pcall(require, "lsp_signature")
+	if not status_ok_lsp_signature then
+		return
+	end
+
+	lsp_signature.on_attach({
+		handler_opts = {
+			border = "rounded",
+		},
+	}, bufnr)
+
 	-- if client.supports_method("textDocument/documentHighlight") then
 	-- 	vim.api.nvim_create_autocmd("CursorHold", {
 	-- 		callback = function()

@@ -195,6 +195,7 @@ local plugins = {
 	{
 		"onsails/lspkind.nvim",
 	},
+	{ "ray-x/lsp_signature.nvim" },
 
 	-- Telescope
 	{
