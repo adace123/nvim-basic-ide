@@ -8,6 +8,8 @@ if not snip_status_ok then
 	return
 end
 
+local lspkind_status_ok, lspkind = pcall(require, "lspkind")
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -30,7 +32,7 @@ local kind_icons = {
 	Value = "",
 	Enum = "",
 	Keyword = "",
-	Snippet = "",
+	Snippet = "",
 	Color = "",
 	File = "",
 	Reference = "",
@@ -41,6 +43,17 @@ local kind_icons = {
 	Event = "",
 	Operator = "",
 	TypeParameter = "",
+}
+
+local source_mapping = {
+	nvim_lsp = "[Lsp]",
+	luasnip = "[Snip]",
+	buffer = "[Buffer]",
+	nvim_lua = "[Lua]",
+	treesitter = "[Tree]",
+	path = "[Path]",
+	rg = "[Rg]",
+	nvim_lsp_signature_help = "[Sig]",
 }
 
 cmp.setup({
@@ -94,18 +107,15 @@ cmp.setup({
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
-		format = function(entry, vim_item)
-			vim_item.kind = kind_icons[vim_item.kind]
-			vim_item.menu = ({
-				nvim_lsp = "",
-				nvim_lua = "",
-				luasnip = "",
-				buffer = "",
-				path = "",
-				emoji = "",
-			})[entry.source.name]
-			return vim_item
-		end,
+		format = lspkind.cmp_format({
+			mode = "symbol_text",
+			maxwidth = 40,
+			before = function(entry, vim_item)
+				vim_item.kind = kind_icons[vim_item.kind] .. " " .. vim_item.kind
+				local menu = source_mapping[entry.source.name]
+				return vim_item
+			end,
+		}),
 	},
 	sources = {
 		{ name = "nvim_lsp" },

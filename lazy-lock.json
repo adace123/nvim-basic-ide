@@ -111,6 +111,10 @@
     "branch": "main",
     "commit": "a968ab4250840dc879e805f918b4f3b892310a12"
   },
+  "lspkind.nvim": {
+    "branch": "master",
+    "commit": "c68b3a003483cf382428a43035079f78474cd11e"
+  },
   "lualine.nvim": {
     "branch": "master",
     "commit": "0050b308552e45f7128f399886c86afefc3eb988"

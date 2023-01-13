@@ -116,7 +116,12 @@ local plugins = {
 	{ "hrsh7th/cmp-cmdline" },
 
 	-- snippets
-	{ "L3MON4D3/LuaSnip" }, --snippet engine
+	{
+		"L3MON4D3/LuaSnip",
+		config = function()
+			require("luasnip.loaders.from_vscode").load()
+		end,
+	}, --snippet engine
 	{ "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
 
 	-- LSP
@@ -186,6 +191,9 @@ local plugins = {
 				},
 			})
 		end,
+	},
+	{
+		"onsails/lspkind.nvim",
 	},
 
 	-- Telescope
