@@ -239,6 +239,10 @@
     "branch": "master",
     "commit": "e806d38190a6a2e8b9244824c2953d6567f141f3"
   },
+  "telescope-live-grep-args.nvim": {
+    "branch": "master",
+    "commit": "7de3baef1ec4fb77f7a8195fe87bebd513244b6a"
+  },
   "telescope.nvim": {
     "branch": "master",
     "commit": "1ba7278cf08da8048e7f589ef6b65a39fd3e4dbf"

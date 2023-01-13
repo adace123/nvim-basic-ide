@@ -79,7 +79,7 @@ local opts = {
 }
 
 local mappings = {
-  ["A"] = { "<cmd>AerialToggle!<cr>", "Aerial" },
+	["A"] = { "<cmd>AerialToggle!<cr>", "Aerial" },
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -103,7 +103,7 @@ local mappings = {
 		f = { "<cmd>Telescope find_files hidden=true<CR>", "Find File" },
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		c = { "<cmd>Telescope colorscheme<CR>", "Colorscheme" },
-		w = { "<cmd>Telescope live_grep<CR>", "Find Text" },
+		w = { "<cmd><lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Find Text" },
 		s = { "<cmd>Telescope grep_string<CR>", "Find String" },
 		p = { "<cmd>Telescope projects<CR>", "Projects" },
 		r = { "<cmd>Telescope oldfiles<CR>", "Recent File" },

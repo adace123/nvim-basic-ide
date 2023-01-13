@@ -204,6 +204,9 @@ local plugins = {
 			require("plugins.telescope")
 		end,
 	},
+	{
+		"nvim-telescope/telescope-live-grep-args.nvim",
+	},
 
 	-- Treesitter
 	{
