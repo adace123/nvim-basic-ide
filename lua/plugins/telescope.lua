@@ -35,6 +35,7 @@ telescope.setup({
 
 local extensions = {
 	"live_grep_args",
+	"lazy",
 }
 
 for _, extension in pairs(extensions) do

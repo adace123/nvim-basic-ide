@@ -106,6 +106,7 @@ local mappings = {
 		w = { "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Find Text" },
 		s = { "<cmd>Telescope grep_string<CR>", "Find String" },
 		p = { "<cmd>Telescope projects<CR>", "Projects" },
+		P = { "<cmd>Telescope lazy<CR>", "Plugins" },
 		r = { "<cmd>Telescope oldfiles<CR>", "Recent File" },
 		R = { "<cmd>Telescope registers<CR>", "Registers" },
 		k = { "<cmd>Telescope keymaps<CR>", "Keymaps" },

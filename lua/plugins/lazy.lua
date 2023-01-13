@@ -205,6 +205,9 @@ local plugins = {
 		end,
 	},
 	{
+		"tsakirist/telescope-lazy.nvim",
+	},
+	{
 		"nvim-telescope/telescope-live-grep-args.nvim",
 	},
 
