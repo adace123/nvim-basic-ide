@@ -96,7 +96,7 @@ local mappings = {
 		name = "Find",
 		B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 		b = { "<cmd>Telescope buffers<CR>", "Find Buffer" },
-		D = { "<cmd>Telescope diagnostics", "Find Diagnostics" },
+		d = { "<cmd>Telescope diagnostics<CR>", "Find Diagnostics" },
 		m = { "<cmd>Telescope marks<CR>", "Find Mark" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		f = { "<cmd>Telescope find_files hidden=true<CR>", "Find File" },
@@ -114,8 +114,6 @@ local mappings = {
 	g = {
 		name = "Git",
 		g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
-		j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
-		k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 		l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
 		p = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
 		r = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
@@ -181,14 +179,19 @@ local mappings = {
 		},
 		t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
 	},
-	s = {
+	S = {
 		name = "Session",
 		s = { "<cmd>lua require('persistence').load()<cr>", "Load Session for Current Directory" },
 		l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Load Last Session" },
 	},
-	T = {
+	s = {
+		name = "Split",
+		h = { "<cmd>split %<cr>", "Horizontal" },
+		v = { "<cmd>vsplit %<cr>", "Vertical" },
+	},
+	["<tab>"] = {
 		name = "Tab",
-		N = { "<cmd>tabnew<CR>", "New Tab" },
+		["<tab>"] = { "<cmd>tabnew<CR>", "New Tab" },
 		n = { "<cmd>tabnext<CR>", "Next Tab" },
 		p = { "<cmd>tabprev<CR>", "Prev Tab" },
 		x = { "<cmd>tabclose<CR>", "Close Tab" },
