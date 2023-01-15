@@ -3,7 +3,7 @@ if not status_ok then
 	return
 end
 
-local theme = "palenight"
+local theme = "material"
 
 local function mode_with_icon(mode)
 	local icons = {
