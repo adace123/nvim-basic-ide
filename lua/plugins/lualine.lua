@@ -7,6 +7,7 @@ local theme = "material"
 
 local function mode_with_icon(mode)
 	local icons = {
+		["NORMAL"] = "",
 		["INSERT"] = "",
 		["VISUAL"] = "",
 		["V-BLOCK"] = "",
