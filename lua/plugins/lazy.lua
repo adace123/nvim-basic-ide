@@ -321,6 +321,15 @@ local plugins = {
 			require("scope").setup()
 		end,
 	},
+
+	-- search and replace
+	{
+		"nvim-pack/nvim-spectre",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("spectre").setup()
+		end,
+	},
 }
 
 lazy.setup(plugins)
