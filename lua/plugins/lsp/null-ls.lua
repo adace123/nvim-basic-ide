@@ -57,7 +57,6 @@ null_ls.setup({
 
 		-- code actions
 		code_actions.statix,
-		code_actions.gitsigns,
 		code_actions.eslint,
 		code_actions.shellcheck,
 	},
