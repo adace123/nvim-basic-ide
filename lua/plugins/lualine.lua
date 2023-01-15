@@ -73,17 +73,22 @@ lualine.setup({
 				color = { fg = "#ff9e64" },
 				separator = { left = "", right = "" },
 			},
-		},
-		lualine_y = {
 			{
 				"progress",
 				separator = { left = "", right = "" },
 			},
 		},
-		lualine_z = {
+		lualine_y = {
 			{
 				"location",
 				separator = { left = "", right = "" },
+			},
+		},
+		lualine_z = {
+			{
+				function()
+					return " " .. os.date("%I:%M")
+				end,
 			},
 		},
 	},
