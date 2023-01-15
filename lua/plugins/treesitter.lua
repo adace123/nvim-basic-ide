@@ -27,6 +27,15 @@ configs.setup({
 		enable = true,
 		enable_autocmd = false,
 	},
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<CR>",
+			node_incremental = "<CR>",
+			scope_incremental = "<S-CR>",
+			node_decremental = "<BS>",
+		},
+	},
 	textobjects = {
 		select = {
 			enable = true,
@@ -36,8 +45,8 @@ configs.setup({
 				["af"] = "@function.outer",
 				["if"] = "@function.inner",
 				["ac"] = "@class.outer",
-        ["ab"] = "@block.outer",
-        ["ib"] = "@block.inner",
+				["ab"] = "@block.outer",
+				["ib"] = "@block.inner",
 				-- You can optionally set descriptions to the mappings (used in the desc parameter of
 				-- nvim_buf_set_keymap) which plugins like which-key display
 				["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
@@ -55,22 +64,22 @@ configs.setup({
 			goto_next_start = {
 				["]f"] = "@function.outer",
 				["]c"] = { query = "@class.outer", desc = "Next class start" },
-        ["]b"] = "@block.outer",
+				["]b"] = "@block.outer",
 			},
 			goto_next_end = {
 				["]F"] = "@function.outer",
 				["]C"] = "@class.outer",
-        ["]B"] = "@block.outer",
+				["]B"] = "@block.outer",
 			},
 			goto_previous_start = {
 				["[f"] = "@function.outer",
 				["[c"] = "@class.outer",
-        ["[b"] = "@block.outer",
+				["[b"] = "@block.outer",
 			},
 			goto_previous_end = {
 				["[F"] = "@function.outer",
 				["[C"] = "@class.outer",
-        ["[B"] = "@block.outer",
+				["[B"] = "@block.outer",
 			},
 		},
 	},
