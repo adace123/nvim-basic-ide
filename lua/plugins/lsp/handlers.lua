@@ -110,6 +110,13 @@ M.on_attach = function(client, bufnr)
 		navic.attach(client, bufnr)
 	end
 
+	local status_op_lsp_inlay_hints, inlay_hints = pcall(require, "inlay-hints")
+	if not status_op_lsp_inlay_hints then
+		return
+	end
+
+	inlay_hints.on_attach(client, bufnr)
+
 	-- if client.supports_method("textDocument/documentHighlight") then
 	-- 	vim.api.nvim_create_autocmd("CursorHold", {
 	-- 		callback = function()

@@ -99,6 +99,10 @@
     "branch": "master",
     "commit": "c4c203c3e8a595bc333abaf168fcb10c13ed5fb7"
   },
+  "inlay-hints.nvim": {
+    "branch": "main",
+    "commit": "006b0898f5d3874e8e528352103733142e705834"
+  },
   "kanagawa.nvim": {
     "branch": "master",
     "commit": "476eb2289d47d132ebacc1a4d459e3204866599b"
