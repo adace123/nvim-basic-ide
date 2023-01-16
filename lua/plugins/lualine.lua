@@ -22,6 +22,22 @@ local function mode_with_icon(mode)
 	return icon .. " " .. mode
 end
 
+local function get_lsp_clients()
+  local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+  if next(clients) == nil then
+    return ""
+  end
+
+  local client_names = {}
+  for _, client in pairs(clients) do
+    if client.name ~= "null-ls" then
+      table.insert(client_names, client.name)
+    end
+  end
+
+  return  " " .. table.concat(client_names, ", ")
+end
+
 lualine.setup({
 	options = {
 		globalstatus = true,
@@ -66,6 +82,9 @@ lualine.setup({
 				sources = { "nvim_lsp" },
 				separator = { left = "", right = "" },
 			},
+      {
+        get_lsp_clients
+      }
 		},
 		lualine_x = {
 			{
