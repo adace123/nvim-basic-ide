@@ -101,6 +101,15 @@ M.on_attach = function(client, bufnr)
 		},
 	}, bufnr)
 
+	local status_ok_navic, navic = pcall(require, "nvim-navic")
+	if not status_ok_navic then
+		return
+	end
+
+	if client.server_capabilities.documentSymbolProvider then
+		navic.attach(client, bufnr)
+	end
+
 	-- if client.supports_method("textDocument/documentHighlight") then
 	-- 	vim.api.nvim_create_autocmd("CursorHold", {
 	-- 		callback = function()

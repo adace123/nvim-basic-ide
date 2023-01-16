@@ -175,13 +175,13 @@
     "branch": "master",
     "commit": "8ebe6894dddaeb1459e1397c865f54fa5ecaac80"
   },
+  "nvim-navic": {
+    "branch": "master",
+    "commit": "7a2b823152fe4de65ee7925b0e32d26ed73bc57c"
+  },
   "nvim-notify": {
     "branch": "master",
     "commit": "b005821516f1f37801a73067afd1cef2dbc4dfe8"
-  },
-  "nvim-remote-containers": {
-    "branch": "master",
-    "commit": "5c689be74f726806754d67de4eb21539c8efb620"
   },
   "nvim-spectre": {
     "branch": "master",

@@ -205,6 +205,7 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	},
+	{ "SmiteshP/nvim-navic" },
 
 	-- Telescope
 	{
