@@ -47,7 +47,12 @@ null_ls.setup({
 		formatting.terraform_fmt,
 
 		-- diagnostics
-		diagnostics.flake8.with({ extra_args = { "--max-line-length=100" } }),
+		diagnostics.flake8.with({
+			extra_args = { "--max-line-length=100" },
+			diagnostics_postprocess = function(diagnostic)
+				diagnostic.severity = vim.diagnostic.severity["WARN"]
+			end,
+		}),
 		diagnostics.tsc,
 		diagnostics.buf,
 		diagnostics.jsonlint,
