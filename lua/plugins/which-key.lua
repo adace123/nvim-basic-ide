@@ -200,6 +200,7 @@ local mappings = {
 		n = { "<cmd>tabnext<CR>", "Next Tab" },
 		p = { "<cmd>tabprev<CR>", "Prev Tab" },
 		x = { "<cmd>tabclose<CR>", "Close Tab" },
+		c = { "<cmd>tabnew<CR>:e $MYVIMRC<CR>", "Open Config in New Tab" },
 	},
 	t = {
 		name = "Terminal",
