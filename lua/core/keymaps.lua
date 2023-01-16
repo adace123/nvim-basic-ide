@@ -80,10 +80,6 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
--- git
-keymap("n", "[h", "<cmd>lua require('gitsigns').prev_hunk()<cr>", opts)
-keymap("n", "]h", "<cmd>lua require('gitsigns').next_hunk()<cr>", opts)
-
 -- Resize window
 keymap("n", "<S-Up>", "<cmd>resize +2<CR>", opts)
 keymap("n", "<S-Down>", "<cmd>resize -2<CR>", opts)

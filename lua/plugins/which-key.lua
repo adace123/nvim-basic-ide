@@ -211,5 +211,33 @@ local mappings = {
 	},
 }
 
+local non_leader_opts = {
+	mode = "n", -- NORMAL mode
+	prefix = nil,
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
+local non_leader_mappings = {
+	["["] = {
+		d = { "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", "Previous Diagnostic" },
+		h = { "<cmd>lua require('gitsigns').prev_hunk()<cr>", "Previous Hunk" },
+	},
+	["]"] = {
+		d = { "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", "Next Diagnostic" },
+		h = { "<cmd>lua require('gitsigns').next_hunk()<cr>", "Next Hunk" },
+	},
+	g = {
+		d = { "<cmd>lua vim.lsp.buf.definition()<CR>", "Goto definition" },
+		D = { "<cmd>Telescope lsp_definition<CR>", "Find definitions" },
+		I = { "<cmd>Telescope lsp_implementations<CR>", "Find implementations" },
+		l = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Open Diagnostic Float" },
+		r = { "<cmd>Telescope lsp_references<CR>", "Find references" },
+	},
+}
+
 which_key.setup(setup)
 which_key.register(mappings, opts)
+which_key.register(non_leader_mappings, non_leader_opts)
