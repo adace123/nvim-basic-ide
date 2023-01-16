@@ -42,3 +42,6 @@ luac.out
 
 plugin/packer_compiled.lua
 sessions/
+__pycache__
+.pytest_cache
+plugin/
