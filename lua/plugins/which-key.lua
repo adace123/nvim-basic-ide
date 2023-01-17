@@ -79,7 +79,6 @@ local opts = {
 }
 
 local mappings = {
-	["A"] = { "<cmd>AerialToggle!<cr>", "Aerial" },
 	["a"] = { "<cmd>Alpha<cr>", "Alpha" },
 	["b"] = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
@@ -184,6 +183,7 @@ local mappings = {
 		t = { "<cmd>TroubleToggle<cr>", "Trouble Toggle" },
 		["@"] = { "<cmd>lua require('neogen').generate()<cr>", "Generate Annotation" },
 	},
+  ["O"] = { "<cmd>SymbolsOutline<CR>", "Symbols Outline" },
 	S = {
 		name = "Session",
 		s = { "<cmd>lua require('persistence').load()<cr>", "Load Session for Current Directory" },

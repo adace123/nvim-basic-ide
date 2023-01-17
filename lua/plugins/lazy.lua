@@ -183,16 +183,6 @@ local plugins = {
 	{ "towolf/vim-helm" },
 	{ "NoahTheDuke/vim-just" },
 	{
-		"stevearc/aerial.nvim",
-		config = function()
-			require("aerial").setup({
-				layout = {
-					min_width = 25,
-				},
-			})
-		end,
-	},
-	{
 		"onsails/lspkind.nvim",
 	},
 	{ "ray-x/lsp_signature.nvim" },
@@ -210,6 +200,12 @@ local plugins = {
 		"simrat39/inlay-hints.nvim",
 		config = function()
 			require("inlay-hints").setup()
+		end,
+	},
+	{
+		"simrat39/symbols-outline.nvim",
+		config = function()
+			require("symbols-outline").setup({})
 		end,
 	},
 
