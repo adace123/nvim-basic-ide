@@ -70,8 +70,6 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 	keymap(bufnr, "n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 	keymap(bufnr, "n", "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
-	keymap(bufnr, "n", "{", "<cmd>AerialPrev<CR>", opts)
-	keymap(bufnr, "n", "}", "<cmd>AerialNext<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
