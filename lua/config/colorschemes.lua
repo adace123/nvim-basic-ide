@@ -28,7 +28,7 @@ for _, theme in pairs(colorschemes) do
 		theme["config"] = function()
 			local ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme["selected"])
 			if not ok then
-				vim.notify("Error loading " .. colorscheme["selected"] .. ". Falling back to default ")
+				vim.notify("Error loading " .. colorscheme["selected"] .. ". Falling back to default ", "error")
 				vim.cmd("colorscheme " .. colorscheme["fallback"])
 			end
 		end
