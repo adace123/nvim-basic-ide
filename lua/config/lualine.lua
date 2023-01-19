@@ -37,16 +37,33 @@ local function get_lsp_clients()
 
 	return " " .. table.concat(client_names, ", ")
 end
-
 lualine.setup({
 	options = {
 		globalstatus = true,
 		icons_enabled = true,
 		theme = require("lualine.themes." .. theme),
-		component_separators = {},
-		section_separators = {},
-		disabled_filetypes = { "alpha", "dashboard" },
+		component_separators = "|",
+		disabled_filetypes = { "alpha" },
+		section_separators = { left = "", right = "" },
 	},
+	-- tabline = {
+	-- 	lualine_a = {
+	-- 		{
+	-- 			"buffers",
+	-- 			right_padding = 2,
+	-- 			symbols = { alternate_file = "" },
+	-- 			buffers_color = {
+	-- 				active = { bg = "#7C77B9", fg = "#FEEAFA" },
+	-- 				inactive = { bg = "#000000", fg = "#95969D" },
+	-- 			},
+	-- 		},
+	-- 	},
+	-- 	lualine_b = {
+	-- 		{
+	-- 			"diagnostics",
+	-- 		},
+	-- 	},
+	-- },
 	sections = {
 		lualine_a = {
 			{
@@ -55,7 +72,7 @@ lualine.setup({
 			},
 		},
 		lualine_b = {
-			{ "branch", separator = { left = "", right = "" } },
+			{ "branch" },
 			{
 				"diff",
 				colored = true,
@@ -65,28 +82,23 @@ lualine.setup({
 					removed = " ",
 				},
 				color = { bg = "#242735" },
-				separator = { left = "", right = "" },
 			},
 			{
 				"filetype",
 				icon_only = true,
 				colored = true,
-				separator = { left = "", right = "" },
 			},
 			{
 				"filename",
-				separator = { left = "", right = "" },
 			},
 		},
 		lualine_c = {
 			{
 				get_lsp_clients,
-				separator = { left = "", right = "" },
 			},
 			{
 				"diagnostics",
 				sources = { "nvim_lsp" },
-				separator = { left = "", right = "" },
 			},
 		},
 		lualine_x = {
@@ -94,17 +106,14 @@ lualine.setup({
 				require("lazy.status").updates,
 				cond = require("lazy.status").has_updates,
 				color = { fg = "#ff9e64" },
-				separator = { left = "", right = "" },
 			},
 			{
 				"progress",
-				separator = { left = "", right = "" },
 			},
 		},
 		lualine_y = {
 			{
 				"location",
-				separator = { left = "", right = "" },
 			},
 		},
 		lualine_z = {

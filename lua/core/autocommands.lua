@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd({ "FileType" }, {
+vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel" },
 	callback = function()
 		vim.cmd([[
@@ -8,7 +8,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "FileType" }, {
+vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "gitcommit", "markdown" },
 	callback = function()
 		vim.opt_local.wrap = true
@@ -18,19 +18,19 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 
 vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
-vim.api.nvim_create_autocmd({ "VimResized" }, {
+vim.api.nvim_create_autocmd("VimResized", {
 	callback = function()
 		vim.cmd("tabdo wincmd =")
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
+vim.api.nvim_create_autocmd("CmdWinEnter", {
 	callback = function()
 		vim.cmd("quit")
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+vim.api.nvim_create_autocmd("TextYankPost", {
 	callback = function()
 		vim.highlight.on_yank({ higroup = "Visual", timeout = 200 })
 	end,
@@ -42,13 +42,13 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 -- 	end,
 -- })
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
+vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
 		vim.cmd("hi link illuminatedWord LspReferenceText")
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+vim.api.nvim_create_autocmd("BufWinEnter", {
 	callback = function()
 		local line_count = vim.api.nvim_buf_line_count(0)
 		if line_count >= 5000 then

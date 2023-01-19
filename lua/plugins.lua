@@ -1,22 +1,3 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"--single-branch",
-		"https://github.com/folke/lazy.nvim.git",
-		lazypath,
-	})
-end
-vim.opt.runtimepath:prepend(lazypath)
-
--- Use a protected call so we don't error out on first use
-local status_ok, lazy = pcall(require, "lazy")
-if not status_ok then
-	return
-end
-
 local plugins = {
 	{ "folke/lazy.nvim" }, -- Have lazy manage itself
 	{ "nvim-lua/plenary.nvim" }, -- Useful lua functions used by lots of plugins
@@ -24,7 +5,7 @@ local plugins = {
 	{
 		"numToStr/Comment.nvim",
 		config = function()
-			require("plugins.autopairs")
+			require("config.autopairs")
 		end,
 	},
 	{ "JoosepAlviste/nvim-ts-context-commentstring" },
@@ -32,80 +13,53 @@ local plugins = {
 	{
 		"kyazdani42/nvim-tree.lua",
 		config = function()
-			require("plugins.nvim-tree")
+			require("config.nvim-tree")
 		end,
 	},
 	{
 		"akinsho/bufferline.nvim",
 		config = function()
-			require("plugins.bufferline")
+			require("config.bufferline")
 		end,
 	},
 	{ "moll/vim-bbye" },
 	{
 		"nvim-lualine/lualine.nvim",
 		config = function()
-			require("plugins.lualine")
+			require("config.lualine")
 		end,
 	},
 	{
 		"akinsho/toggleterm.nvim",
 		config = function()
-			require("plugins.toggleterm")
+			require("config.toggleterm")
 		end,
 	},
 	{
 		"ahmedkhalf/project.nvim",
 		config = function()
-			require("plugins.project")
+			require("config.project")
 		end,
 	},
 	{ "lewis6991/impatient.nvim" },
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		config = function()
-			require("plugins.indentline")
+			require("config.indentline")
 		end,
 	},
 	{
 		"goolord/alpha-nvim",
 		config = function()
-			require("plugins.alpha")
+			require("config.alpha")
 		end,
 	},
-
-	-- Colorschemes
-	{ "folke/tokyonight.nvim" },
-	{ "lunarvim/darkplus.nvim" },
-	{ "rebelot/kanagawa.nvim" },
-	{ "catppuccin/nvim" },
-	{ "sainnhe/everforest" },
-	{ "ellisonleao/gruvbox.nvim" },
-	{
-		"sam4llis/nvim-tundra",
-		config = function()
-			require("nvim-tundra").setup({
-				dim_inactive_windows = {
-					enabled = true,
-				},
-			})
-		end,
-	},
-	{ "ray-x/aurora" },
-	{ "cocopon/iceberg.vim" },
-	{ "drewtempelmeyer/palenight.vim" },
-	{ "olimorris/onedarkpro.nvim" },
-	{ "nyoom-engineering/oxocarbon.nvim" },
-	{ "sainnhe/gruvbox-material" },
-	{ "arcticicestudio/nord-vim" },
-	{ "LunarVim/horizon.nvim" },
-	{ "Rigellute/shades-of-purple.vim" },
 
 	-- cmp plugins
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
-			require("plugins.cmp")
+			require("config.cmp")
 		end,
 	}, -- The completion plugin
 	{ "hrsh7th/cmp-buffer" }, -- buffer completions
@@ -130,14 +84,14 @@ local plugins = {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require("plugins.lsp")
+			require("config.lsp")
 		end,
 	},
 	{ "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
 	{
 		"RRethy/vim-illuminate",
 		config = function()
-			require("plugins.illuminate")
+			require("config.illuminate")
 		end,
 	},
 	{
@@ -213,7 +167,7 @@ local plugins = {
 	{
 		"nvim-telescope/telescope.nvim",
 		config = function()
-			require("plugins.telescope")
+			require("config.telescope")
 		end,
 	},
 	{
@@ -227,7 +181,7 @@ local plugins = {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		config = function()
-			require("plugins.treesitter")
+			require("config.treesitter")
 		end,
 	},
 	{
@@ -247,7 +201,7 @@ local plugins = {
 	{
 		"mfussenegger/nvim-dap",
 		config = function()
-			require("plugins.dap")
+			require("config.dap")
 		end,
 	},
 	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap" } },
@@ -257,7 +211,7 @@ local plugins = {
 	{
 		"folke/which-key.nvim",
 		config = function()
-			require("plugins.which-key")
+			require("config.which-key")
 		end,
 	},
 
@@ -333,6 +287,7 @@ local plugins = {
 			require("spectre").setup()
 		end,
 	},
-}
 
-lazy.setup(plugins)
+  require("config.colorschemes")
+}
+return plugins
