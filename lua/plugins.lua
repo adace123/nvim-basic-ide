@@ -288,6 +288,6 @@ local plugins = {
 		end,
 	},
 
-  require("config.colorschemes")
+	require("config.colorschemes"),
 }
 return plugins
