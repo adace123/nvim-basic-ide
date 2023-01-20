@@ -73,7 +73,9 @@ lualine.setup({
 			},
 		},
 		lualine_b = {
-			{ "branch", separator = { left = "", right = "" } },
+			{ "branch", separator = { left = "", right = "" }, color = {
+				bg = "#9D79BC",
+			} },
 			{
 				"diff",
 				colored = true,
