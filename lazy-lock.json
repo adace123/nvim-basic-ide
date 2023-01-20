@@ -19,6 +19,10 @@
     "branch": "master",
     "commit": "76ce329f419d615f52335e2c18153674a4598276"
   },
+  "barbecue.nvim": {
+    "branch": "main",
+    "commit": "231d6f545afd108330bd515fc69f4cb509c97c0c"
+  },
   "bufferline.nvim": {
     "branch": "main",
     "commit": "c7492a76ce8218e3335f027af44930576b561013"

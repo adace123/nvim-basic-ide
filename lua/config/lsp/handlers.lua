@@ -99,15 +99,6 @@ M.on_attach = function(client, bufnr)
 		},
 	}, bufnr)
 
-	local status_ok_navic, navic = pcall(require, "nvim-navic")
-	if not status_ok_navic then
-		return
-	end
-
-	if client.server_capabilities.documentSymbolProvider then
-		navic.attach(client, bufnr)
-	end
-
 	local status_op_lsp_inlay_hints, inlay_hints = pcall(require, "inlay-hints")
 	if not status_op_lsp_inlay_hints then
 		return

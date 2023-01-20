@@ -149,7 +149,6 @@ local plugins = {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	},
-	{ "SmiteshP/nvim-navic" },
 	{
 		"simrat39/inlay-hints.nvim",
 		config = function()
@@ -289,5 +288,15 @@ local plugins = {
 	},
 
 	require("config.colorschemes"),
+	{
+		"utilyre/barbecue.nvim",
+		config = function()
+			require("barbecue").setup()
+		end,
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"SmiteshP/nvim-navic",
+		},
+	},
 }
 return plugins
