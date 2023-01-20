@@ -4,8 +4,23 @@ if not status_ok then
 end
 
 bufferline.setup({
+	highlights = {
+		buffer_selected = {
+			bg = {
+				attribute = "bg",
+				highlight = "StatusLine",
+			},
+			fg = "#BC96E6",
+			sp = {
+				attribute = "fg",
+				highlight = "BlueFg",
+			},
+		},
+	},
 	options = {
-    separator_style = {  "", ""  },
+		left_trunc_marker = "",
+		right_trunc_marker = "",
+		buffer_close_icon = "",
 		close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
