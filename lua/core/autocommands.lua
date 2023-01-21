@@ -2,10 +2,17 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "qf", "help", "man", "lspinfo", "spectre_panel" },
 	callback = function()
 		vim.cmd([[
-      nnoremap <silent> <buffer> q :close<CR> 
-      set nobuflisted 
+      nnoremap <silent> <buffer> q :close<CR>
+      set nobuflisted
     ]])
 	end,
+})
+
+--- Remove all trailing whitespace on save
+local TrimWhiteSpaceGrp = vim.api.nvim_create_augroup("TrimWhiteSpaceGrp", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePre", {
+	command = [[:%s/\s\+$//e]],
+	group = TrimWhiteSpaceGrp,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
