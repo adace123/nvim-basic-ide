@@ -52,6 +52,9 @@ keymap("v", "p", '"_dP', opts)
 -- Redo
 keymap("n", "U", "<C-r>", opts)
 
+-- Replace in visual mode
+keymap("v", "r", "y:%s/<C-r>0/", opts)
+
 -- Save
 keymap("n", "<C-s>", "<cmd>w!<cr>", opts)
 
