@@ -48,8 +48,6 @@ keymap("n", "<S-e>", "<cmd>:e #<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
-keymap("n", "[p", "o<Esc>p", opts)
-keymap("n", "]p", "O<Esc>p", opts)
 
 -- Redo
 keymap("n", "U", "<C-r>", opts)
@@ -75,8 +73,6 @@ keymap("v", ">", ">gv", opts)
 -- Move lines
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
-
--- Plugins --
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
