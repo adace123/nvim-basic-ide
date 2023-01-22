@@ -103,6 +103,10 @@
     "branch": "main",
     "commit": "006b0898f5d3874e8e528352103733142e705834"
   },
+  "kanagawa.nvim": {
+    "branch": "master",
+    "commit": "4c8d48726621a7f3998c7ed35b2c2535abc22def"
+  },
   "lazy.nvim": {
     "branch": "main",
     "commit": "96d759d1cbd8b0bd0ea0a0c2987f99410272f348"
