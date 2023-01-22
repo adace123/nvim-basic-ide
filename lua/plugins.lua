@@ -73,7 +73,7 @@ local plugins = {
 	{
 		"L3MON4D3/LuaSnip",
 		config = function()
-			require("luasnip.loaders.from_vscode").load()
+			require("config.luasnip").setup()
 		end,
 	}, --snippet engine
 	{ "rafamadriz/friendly-snippets" }, -- a bunch of snippets to use
