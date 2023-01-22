@@ -93,6 +93,9 @@ local mappings = {
 	["D"] = { "<cmd>lua require('notify').dismiss()<CR>", "Dismiss Notifications" },
 	["r"] = { "*:%s//", "Replace Under Cursor" },
 	["R"] = { "<cmd>Spectre<CR>", "Spectre" },
+	["<Leader>"] = {
+		r = { "<cmd>luafile %<CR>", "Source File" },
+	},
 	f = {
 		name = "Find",
 		B = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
