@@ -5,5 +5,6 @@ end
 
 require("config.lsp.mason")
 require("config.lsp.handlers").setup()
+vim.lsp.set_log_level("ERROR")
 require("config.lsp.null-ls")
 require("config.lsp.rust")
