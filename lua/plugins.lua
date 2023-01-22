@@ -287,6 +287,7 @@ local plugins = {
 		end,
 	},
 
+	-- colorschemes
 	require("config.colorschemes"),
 	{
 		"utilyre/barbecue.nvim",
@@ -297,6 +298,14 @@ local plugins = {
 			"neovim/nvim-lspconfig",
 			"SmiteshP/nvim-navic",
 		},
+	},
+
+	-- window separator
+	{
+		"nvim-zh/colorful-winsep.nvim",
+		config = function()
+			require("colorful-winsep").setup()
+		end,
 	},
 }
 return plugins

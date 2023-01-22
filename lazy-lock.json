@@ -51,6 +51,10 @@
     "branch": "master",
     "commit": "18095520391186d634a0045dacaa346291096566"
   },
+  "colorful-winsep.nvim": {
+    "branch": "main",
+    "commit": "956d65c9a31ce81b7873bef1682c72eb00d9affb"
+  },
   "crates.nvim": {
     "branch": "main",
     "commit": "707ed7d6f8927a5ec0c241aa793f694f1b05f731"
