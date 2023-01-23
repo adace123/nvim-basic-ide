@@ -43,7 +43,7 @@ lualine.setup({
 		icons_enabled = true,
 		theme = require("lualine.themes." .. theme),
 		component_separators = "|",
-		disabled_filetypes = { "alpha" },
+		disabled_filetypes = { "alpha", "NVimTree" },
 		section_separators = { left = "", right = "" },
 	},
 	tabline = {
