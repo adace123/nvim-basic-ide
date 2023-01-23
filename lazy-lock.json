@@ -175,6 +175,10 @@
     "branch": "main",
     "commit": "fc83bd515c21c7912a6b9f97088e0492e923dfe0"
   },
+  "nvim-lightbulb": {
+    "branch": "master",
+    "commit": "56b9ce31ec9d09d560fe8787c0920f76bc208297"
+  },
   "nvim-lspconfig": {
     "branch": "master",
     "commit": "0eecf453d33248e9d571ad26559f35175c37502d"

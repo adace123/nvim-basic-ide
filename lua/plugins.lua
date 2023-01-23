@@ -161,6 +161,19 @@ local plugins = {
 			require("symbols-outline").setup({})
 		end,
 	},
+	{
+		"kosayoda/nvim-lightbulb",
+		config = function()
+			require("nvim-lightbulb").setup({
+				sign = {
+					enabled = false,
+				},
+				virtual_text = {
+					enabled = true,
+				},
+			})
+		end,
+	},
 
 	-- Telescope
 	{
