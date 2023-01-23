@@ -15,10 +15,6 @@
     "branch": "main",
     "commit": "21a0f2520ad3a7c32c0822f943368dc063a569fb"
   },
-  "aurora": {
-    "branch": "master",
-    "commit": "76ce329f419d615f52335e2c18153674a4598276"
-  },
   "barbecue.nvim": {
     "branch": "main",
     "commit": "47d397857eedc59b813040d23a826ef00508c6db"
@@ -143,9 +139,9 @@
     "branch": "main",
     "commit": "465af9d6c6fb7f360175991dcc23fc10917e3a06"
   },
-  "nord-vim": {
+  "nordic.nvim": {
     "branch": "main",
-    "commit": "0748955e9e8d9770b44f2bec8456189430b37d9d"
+    "commit": "b876dc1b6aa154cde9531e73ce5b2cfcde59084c"
   },
   "null-ls.nvim": {
     "branch": "main",
@@ -230,10 +226,6 @@
   "oxocarbon.nvim": {
     "branch": "main",
     "commit": "b58812cde84df6ec0c2f54e602d608d94a78ebef"
-  },
-  "palenight.vim": {
-    "branch": "master",
-    "commit": "847fcf5b1de2a1f9c28fdcc369d009996c6bf633"
   },
   "persistence.nvim": {
     "branch": "main",

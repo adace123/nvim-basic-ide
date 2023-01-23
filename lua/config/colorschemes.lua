@@ -12,12 +12,19 @@ local colorschemes = {
 	{ "sainnhe/everforest" },
 	{ "ellisonleao/gruvbox.nvim" },
 	{ "sam4llis/nvim-tundra" },
-	{ "ray-x/aurora" },
-	{ "drewtempelmeyer/palenight.vim" },
 	{ "olimorris/onedarkpro.nvim" },
+	{
+		"AlexvZyl/nordic.nvim",
+		config = function()
+			require("nordic").setup({
+				telescope = {
+					style = "flat",
+				},
+			})
+		end,
+	},
 	{ "nyoom-engineering/oxocarbon.nvim" },
 	{ "sainnhe/gruvbox-material" },
-	{ "arcticicestudio/nord-vim" },
 	{ "LunarVim/horizon.nvim" },
 	{ "Rigellute/shades-of-purple.vim" },
 }
