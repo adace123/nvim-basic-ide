@@ -271,6 +271,10 @@
     "branch": "master",
     "commit": "2f32775405f6706348b71d0bb8a15a22852a61e4"
   },
+  "todo-comments.nvim": {
+    "branch": "main",
+    "commit": "077c59586d9d0726b0696dc5680eb863f4e04bc5"
+  },
   "toggleterm.nvim": {
     "branch": "main",
     "commit": "a54e6c471ce1cd8ef8357e34598a28a955297131"

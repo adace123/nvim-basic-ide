@@ -114,6 +114,7 @@ local mappings = {
 		P = { "<cmd>Telescope lazy<CR>", "Plugins" },
 		r = { "<cmd>Telescope oldfiles<CR>", "Recent File" },
 		R = { "<cmd>Telescope registers<CR>", "Registers" },
+		t = { "<cmd>TodoTelescope<CR>", "Todos" },
 		k = { "<cmd>Telescope keymaps<CR>", "Keymaps" },
 		C = { "<cmd>Telescope commands<CR>", "Commands" },
 		z = { "<cmd>Telescope zoxide list<CR>", "Zoxide" },
