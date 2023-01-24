@@ -8,7 +8,7 @@ return {
 		env.fmt(
 			[[
     if err != nil {{
-      return nil
+      return err
     }}
   ]],
 			{}
