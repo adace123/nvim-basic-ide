@@ -20,6 +20,7 @@ toggleterm.setup({
 	},
 })
 
+local Terminal = require("toggleterm.terminal").Terminal
 function _G.set_terminal_keymaps()
 	local opts = { noremap = true }
 	vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
@@ -28,16 +29,19 @@ function _G.set_terminal_keymaps()
 	vim.keymap.set("t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 	vim.keymap.set("t", "<C-x>", function()
 		local t = require("toggleterm.terminal")
-		local term = t.get(1)
-		if term ~= nil then
-			term:shutdown()
+		for _, term in pairs(t.get_all()) do
+			if term.window == vim.api.nvim_get_current_win() then
+				term:shutdown()
+			end
 		end
 	end, opts)
+	vim.keymap.set("t", "<C-s>", function()
+		Terminal:new({ direction = "horizontal" }):open()
+	end)
 end
 
 vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
-local Terminal = require("toggleterm.terminal").Terminal
 -- TODO: Add ability to shut these down
 local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 local k9s = Terminal:new({ cmd = "k9s", hidden = true })
