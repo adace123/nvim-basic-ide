@@ -50,7 +50,7 @@ local bottom = Terminal:new({ cmd = "btm", hidden = true })
 
 local path = vim.fn.getcwd()
 function _LAZYGIT_TOGGLE()
-	-- reload laygit when buffer from another repo is open
+	-- reload laygit when switching to buffer from different repo
 	if path ~= vim.fn.getcwd() then
 		path = vim.fn.getcwd()
 		lazygit = Terminal:new({ cmd = "lazygit", hidden = true })

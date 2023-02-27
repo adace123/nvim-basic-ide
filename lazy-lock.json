@@ -75,6 +75,10 @@
     "branch": "main",
     "commit": "a5caac26768af80b7c57b919f77b3fed3d7424d0"
   },
+  "glow.nvim": {
+    "branch": "main",
+    "commit": "2bb4afb6e9dbc93993a1d7d4168dac08c74590ac"
+  },
   "gruvbox-material": {
     "branch": "master",
     "commit": "13b7eb4589d9ab0f388ca51047051f7158c930e5"
