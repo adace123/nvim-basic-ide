@@ -68,8 +68,6 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "<leader>ls", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lq", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
-	keymap(bufnr, "n", "<leader>xx", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
-	keymap(bufnr, "n", "<leader>xX", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
 end
 
 M.on_attach = function(client, bufnr)
