@@ -1,6 +1,6 @@
 local colorscheme = {
-	plugin = "rebelot/kanagawa.nvim",
-	selected = "kanagawa",
+	plugin = "LunarVim/horizon.nvim",
+	selected = "horizon",
 	fallback = "slate",
 }
 
