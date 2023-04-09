@@ -188,6 +188,9 @@ local plugins = {
 	{
 		"nvim-telescope/telescope-live-grep-args.nvim",
 	},
+	{
+		"jvgrootveld/telescope-zoxide",
+	},
 
 	-- Treesitter
 	{
@@ -328,5 +331,11 @@ local plugins = {
 		end,
 	},
 	{ "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+	{
+		"ThePrimeagen/harpoon",
+		config = function()
+			require("harpoon").setup()
+		end,
+	},
 }
 return plugins
